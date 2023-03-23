@@ -5,6 +5,6 @@ import connectDB from './db';
 
 connectDB()
   .then(() => logger.info('DB connection successful'))
-  .catch((error) => logger.info(error.message));
+  .catch((error) => logger.error(error.message));
 
 app.listen(config.port, () => logger.info(`listening on port ${config.port}`));
