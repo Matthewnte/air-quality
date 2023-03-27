@@ -13,7 +13,9 @@ Or run it manually:
 1. `npm install`
 1. `npm run start:dev`
 
-To run cron job, run `npm run cron:start`
+The app should be available via [http://localhost:8080/health](http://localhost:8080/health).
+
+To run cron job, run `npm run cron:start`  
 To stop cron job, run `npm run cron:stop`
 
 
@@ -23,6 +25,14 @@ To run the tests, use the command `docker compose -f docker-compose.test.yml up`
 Or run it manually:
 1. `npm install`
 1. `npm run test`
+
+## Send Requests
+After starting up your server by following the commands in the Getting started section.
+You could send a request to the 
+5. Example request:
+```
+curl --location -g 'http://localhost:8080/api/v1/air-qualitylat=35.98&lon=140.33&key={{YOUR_API_KEY}}'
+```
 
 
 ## Assumptions and Trade-Offs
