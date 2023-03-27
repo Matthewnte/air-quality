@@ -5,7 +5,7 @@ import createLogAirQualityTask from './logAirQuality';
  * every 1 minute then save them in the database
  */
 const parisZone = { latitude: '48.856613', longitude: '2.352222' };
-export const logParisAirQualityTask = createLogAirQualityTask('*/10 * * * * *', parisZone);
+export const logParisAirQualityTask = createLogAirQualityTask('* * * * *', parisZone);
 
 export default {
   start: () => {
