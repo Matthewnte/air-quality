@@ -10,7 +10,7 @@ const iqair = {
    * @param zone the latitude and longitude of the area of interest.
    * @returns nearest city's data, using the lat/lon coordinates or user IP geolocation.
    */
-  getAirQuality: async ({ latitude, longitude }: Zone) => {
+  getAirQuality: async ({ latitude, longitude }: Zone): Promise<AirQualityResponse> => {
     if (!config.iqair.apiKey) {
       throw new AppError('Please provide your iqair API key in environment', 500);
     }
