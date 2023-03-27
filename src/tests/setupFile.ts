@@ -1,12 +1,9 @@
-import { MongoMemoryServer } from 'mongodb-memory-server';
 import mongoose from 'mongoose';
-
-const instance: MongoMemoryServer = (global as any).__MONGOINSTANCE;
+import connectDB from '../db';
 
 // Setup DataBase
 beforeAll(async () => {
-  const uri = instance.getUri();
-  await mongoose.connect(uri);
+  await connectDB();
 });
 
 // Reset all data before Each test
@@ -22,5 +19,4 @@ beforeEach(async () => {
 afterAll(async () => {
   await mongoose.connection.dropDatabase();
   await mongoose.connection.close();
-  await instance.stop();
 });
