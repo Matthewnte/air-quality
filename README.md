@@ -31,7 +31,7 @@ Or run it manually:
 After starting up your server by following the commands in the Getting started section, you could send a request to get air quality for a specified zone
 5. Example request:
 ```
-curl --location -g 'http://localhost:8080/api/v1/air-quality?latitude=48.856613&longitude=2.352222&key={{YOUR_API_KEY}}'
+curl 'http://localhost:8080/api/v1/air-quality?latitude=48.856613&longitude=2.352222&key={{YOUR_API_KEY}}'
 ```
 
 
