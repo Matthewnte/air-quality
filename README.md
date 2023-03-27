@@ -7,8 +7,8 @@ To run the program, follow these steps:
 
 1. Clone this repository to your local machine or download zip file.
 1. Setup your .env variables as described in the `env.example` file.
-1. Run the program using `docker compose up`.
-Running with docker compose automatically start cron job
+1. Run the program using `docker compose up`.  
+Running with docker compose automatically start the Cron Job
 
 Or run it manually:
 1. `npm install`
@@ -28,11 +28,10 @@ Or run it manually:
 1. `npm run test`
 
 ## Send Requests
-After starting up your server by following the commands in the Getting started section.
-You could send a request to get air quality for a specified zone
+After starting up your server by following the commands in the Getting started section, you could send a request to get air quality for a specified zone
 5. Example request:
 ```
-curl --location -g 'http://localhost:8080/api/v1/air-qualitylat=35.98&lon=140.33&key={{YOUR_API_KEY}}'
+curl --location -g 'http://localhost:8080/api/v1/air-quality?latitude=48.856613&longitude=2.352222&key={{YOUR_API_KEY}}'
 ```
 
 
